@@ -3,7 +3,49 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30804.86
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MilitaryShop.Core", "MilitaryShop.Core\MilitaryShop.Core.csproj", "{DC4D5371-467D-4EF4-892A-D631D9888C0E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MilitaryShop.Services", "MilitaryShop.Services\MilitaryShop.Services.csproj", "{40B0942E-4760-420A-99A5-C8AAF1A30377}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MilitaryShop.DataAccess.SQL", "MilitaryShop.DataAccess.SQL\MilitaryShop.DataAccess.SQL.csproj", "{D778FAE9-350B-4E7D-9FE8-298467EE87C6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MilitaryShop.DataAccess.InMemory", "MilitaryShop.DataAccess.InMemory\MilitaryShop.DataAccess.InMemory.csproj", "{095F5CD3-F90B-4C0F-898F-9EA3D64A6EBA}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "MilitaryShop.WebUI", "MilitaryShop.WebUI\MilitaryShop.WebUI.vbproj", "{7D86D630-E922-4836-95A9-47B89F4D5B1D}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "MilitaryShop.WebUI.Tests", "MilitaryShop.WebUI.Tests\MilitaryShop.WebUI.Tests.vbproj", "{DB80A7AF-944D-4A1C-ADD2-DE71A83D3699}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DC4D5371-467D-4EF4-892A-D631D9888C0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC4D5371-467D-4EF4-892A-D631D9888C0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC4D5371-467D-4EF4-892A-D631D9888C0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC4D5371-467D-4EF4-892A-D631D9888C0E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{40B0942E-4760-420A-99A5-C8AAF1A30377}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40B0942E-4760-420A-99A5-C8AAF1A30377}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40B0942E-4760-420A-99A5-C8AAF1A30377}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40B0942E-4760-420A-99A5-C8AAF1A30377}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D778FAE9-350B-4E7D-9FE8-298467EE87C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D778FAE9-350B-4E7D-9FE8-298467EE87C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D778FAE9-350B-4E7D-9FE8-298467EE87C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D778FAE9-350B-4E7D-9FE8-298467EE87C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{095F5CD3-F90B-4C0F-898F-9EA3D64A6EBA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{095F5CD3-F90B-4C0F-898F-9EA3D64A6EBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{095F5CD3-F90B-4C0F-898F-9EA3D64A6EBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{095F5CD3-F90B-4C0F-898F-9EA3D64A6EBA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D86D630-E922-4836-95A9-47B89F4D5B1D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D86D630-E922-4836-95A9-47B89F4D5B1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D86D630-E922-4836-95A9-47B89F4D5B1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D86D630-E922-4836-95A9-47B89F4D5B1D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB80A7AF-944D-4A1C-ADD2-DE71A83D3699}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB80A7AF-944D-4A1C-ADD2-DE71A83D3699}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB80A7AF-944D-4A1C-ADD2-DE71A83D3699}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB80A7AF-944D-4A1C-ADD2-DE71A83D3699}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
