@@ -5,16 +5,20 @@ using System.Web;
 using System.Web.Mvc;
 using MilitaryShop.Core.Models;
 using MilitaryShop.DataAccess.InMemory;
+using MilitaryShop.Core.ViewModels;
+using MilitaryShop.Core.Contracts;
 
 namespace MilitaryShop.WebUI.Controllers
 {
     public class ProductMenagerController : Controller
     {
-        ProductRepository productRepository;
+        IRepository<Product> productRepository;
+        IRepository<ProductCategory> productCategories;
 
-        public ProductMenagerController()
+        public ProductMenagerController(IRepository<Product> productRepository, IRepository<ProductCategory> productCategoryRepository)
         {
-            productRepository = new ProductRepository();
+            this.productRepository = productRepository;
+            productCategories = productCategoryRepository;
         }
 
         // GET: ProductMenager
@@ -26,8 +30,11 @@ namespace MilitaryShop.WebUI.Controllers
 
         public ActionResult Create()
         {
-            Product product = new Product();
-            return View(product);
+            ProductMenagerViewModel viewModel = new ProductMenagerViewModel();
+
+            viewModel.Product = new Product();
+            viewModel.productCategories = productCategories.Collection();
+            return View(viewModel);
         }
 
         [HttpPost]
@@ -55,7 +62,10 @@ namespace MilitaryShop.WebUI.Controllers
             }
             else
             {
-                return View(product);
+                ProductMenagerViewModel viewModel = new ProductMenagerViewModel();
+                viewModel.Product = new Product();
+                viewModel.productCategories = productCategories.Collection();
+                return View(viewModel);
             }
         }
 
