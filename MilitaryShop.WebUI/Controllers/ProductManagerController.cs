@@ -7,21 +7,22 @@ using MilitaryShop.Core.Models;
 using MilitaryShop.DataAccess.InMemory;
 using MilitaryShop.Core.ViewModels;
 using MilitaryShop.Core.Contracts;
+using System.IO;
 
 namespace MilitaryShop.WebUI.Controllers
 {
-    public class ProductMenagerController : Controller
+    public class ProductManagerController : Controller
     {
         IRepository<Product> productRepository;
         IRepository<ProductCategory> productCategories;
 
-        public ProductMenagerController(IRepository<Product> productRepository, IRepository<ProductCategory> productCategoryRepository)
+        public ProductManagerController(IRepository<Product> productRepository, IRepository<ProductCategory> productCategoryRepository)
         {
             this.productRepository = productRepository;
             productCategories = productCategoryRepository;
         }
 
-        // GET: ProductMenager
+        // GET: Productmanager
         public ActionResult Index()
         {
             List<Product> products = productRepository.Collection().ToList();
@@ -30,7 +31,7 @@ namespace MilitaryShop.WebUI.Controllers
 
         public ActionResult Create()
         {
-            ProductMenagerViewModel viewModel = new ProductMenagerViewModel();
+            ProductManagerViewModel viewModel = new ProductManagerViewModel();
 
             viewModel.Product = new Product();
             viewModel.productCategories = productCategories.Collection();
@@ -38,14 +39,20 @@ namespace MilitaryShop.WebUI.Controllers
         }
 
         [HttpPost]
-        public ActionResult Create(Product product)
+        public ActionResult Create(Product product, HttpPostedFileBase file)
         {
-            if(!ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
                 return View(product);
             }
             else
             {
+                if (file != null)
+                {
+                    product.Image = product.Id + Path.GetExtension(file.FileName);
+                    file.SaveAs(Server.MapPath("//Content//ProductImages//") + product.Image);
+                }
+
                 productRepository.Insert(product);
                 productRepository.Commit();
 
@@ -56,13 +63,13 @@ namespace MilitaryShop.WebUI.Controllers
         public ActionResult Edit(string Id)
         {
             Product product = productRepository.Find(Id);
-            if(product == null)
+            if (product == null)
             {
                 return HttpNotFound();
             }
             else
             {
-                ProductMenagerViewModel viewModel = new ProductMenagerViewModel();
+                ProductManagerViewModel viewModel = new ProductManagerViewModel();
                 viewModel.Product = new Product();
                 viewModel.productCategories = productCategories.Collection();
                 return View(viewModel);
@@ -70,7 +77,7 @@ namespace MilitaryShop.WebUI.Controllers
         }
 
         [HttpPost]
-        public ActionResult Edit(Product product, string Id)
+        public ActionResult Edit(Product product, string Id, HttpPostedFileBase file)
         {
             Product productToEdit = productRepository.Find(Id);
             if (productToEdit == null)
@@ -79,14 +86,18 @@ namespace MilitaryShop.WebUI.Controllers
             }
             else
             {
-                if(!ModelState.IsValid)
+                if (!ModelState.IsValid)
                 {
                     return View(product);
                 }
 
+                if (file != null)
+                {
+                    productToEdit.Image = product.Id + Path.GetExtension(file.FileName);
+                    file.SaveAs(Server.MapPath("//Content//ProductImages//") + productToEdit.Image);
+                }
                 productToEdit.Category = product.Category;
                 productToEdit.Description = product.Description;
-                productToEdit.Image = product.Image;
                 productToEdit.Name = product.Name;
                 productToEdit.Price = product.Price;
 

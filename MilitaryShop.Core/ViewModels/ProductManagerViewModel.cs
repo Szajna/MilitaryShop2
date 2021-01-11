@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace MilitaryShop.Core.ViewModels
 {
-    public class ProductMenagerViewModel
+    public class ProductManagerViewModel
     {
         public Product Product { get; set; }
         public IEnumerable<ProductCategory> productCategories { get; set; }

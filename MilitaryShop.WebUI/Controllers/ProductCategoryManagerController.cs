@@ -9,16 +9,16 @@ using System.Web.Mvc;
 
 namespace MilitaryShop.WebUI.Controllers
 {
-    public class ProductCategoryMenagerController : Controller
+    public class ProductCategoryManagerController : Controller
     {
         IRepository<ProductCategory> productCategoryRepository;
 
-        public ProductCategoryMenagerController(IRepository<ProductCategory> productRepository)
+        public ProductCategoryManagerController(IRepository<ProductCategory> productRepository)
         {
             productCategoryRepository = productRepository;
         }
 
-        // GET: ProductMenager
+        // GET: ProductManager
         public ActionResult Index()
         {
             List<ProductCategory> products = productCategoryRepository.Collection().ToList();
@@ -74,11 +74,8 @@ namespace MilitaryShop.WebUI.Controllers
                 {
                     return View(productCategory);
                 }
-
                 productCategoryToEdit.Category = productCategory.Category;
-
                 productCategoryRepository.Commit();
-
                 return RedirectToAction("Index");
             }
         }
