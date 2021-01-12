@@ -34,7 +34,7 @@ namespace MilitaryShop.WebUI.Controllers
             ProductManagerViewModel viewModel = new ProductManagerViewModel();
 
             viewModel.Product = new Product();
-            viewModel.productCategories = productCategories.Collection();
+            viewModel.ProductCategories = productCategories.Collection();
             return View(viewModel);
         }
 
@@ -71,7 +71,7 @@ namespace MilitaryShop.WebUI.Controllers
             {
                 ProductManagerViewModel viewModel = new ProductManagerViewModel();
                 viewModel.Product = new Product();
-                viewModel.productCategories = productCategories.Collection();
+                viewModel.ProductCategories = productCategories.Collection();
                 return View(viewModel);
             }
         }

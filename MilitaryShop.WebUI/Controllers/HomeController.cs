@@ -1,5 +1,6 @@
 ﻿using MilitaryShop.Core.Contracts;
 using MilitaryShop.Core.Models;
+using MilitaryShop.Core.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,10 +19,24 @@ namespace MilitaryShop.WebUI.Controllers
             this.productRepository = productRepository;
             productCategories = productCategoryRepository;
         }
-        public ActionResult Index()
+        public ActionResult Index(string Category=null)
         {
-            List<Product> products = productRepository.Collection().ToList();
-            return View(products);
+            List<Product> products;
+            List<ProductCategory> categories = productCategories.Collection().ToList();
+
+            if(Category==null)
+            {
+                products = productRepository.Collection().ToList();
+            }
+            else
+            {
+                products = productRepository.Collection().Where(p => p.Category == Category).ToList();
+            }
+
+            ProductListViewModel model = new ProductListViewModel();
+            model.Products = products;
+            model.ProductCategories = categories;
+            return View(model);
         }
         public ActionResult Details(string Id)
         {
