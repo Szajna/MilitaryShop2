@@ -25,9 +25,9 @@ namespace MilitaryShop.Services
 
         private Basket GetBasket(HttpContextBase httpContext, bool createIfNull)
         {   
-            Basket basket = new Basket();
             HttpCookie cookie = httpContext.Request.Cookies.Get(BasketSessionName);
-            
+            Basket basket = new Basket();
+
             if (cookie != null)
             {
                 string basketId = cookie.Value;
@@ -127,8 +127,8 @@ namespace MilitaryShop.Services
 
         public BasketSummaryViewModel GetBasketSummary(HttpContextBase httpContext)
         {
-            Basket basket = GetBasket(httpContext, false);
             BasketSummaryViewModel model = new BasketSummaryViewModel(0, 0);
+            Basket basket = GetBasket(httpContext, false);
 
             if (basket != null)
             {
