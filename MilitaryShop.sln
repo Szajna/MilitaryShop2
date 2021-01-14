@@ -13,8 +13,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MilitaryShop.DataAccess.InM
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MilitaryShop.WebUI", "MilitaryShop.WebUI\MilitaryShop.WebUI.csproj", "{B93E6718-1D9E-4B51-B247-5214B7703C5E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MilitaryShop.WebUI.Tests", "MilitaryShop.WebUI.Tests\MilitaryShop.WebUI.Tests.csproj", "{9E25799A-FFB8-4DF3-BA2C-2C61F4948483}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,10 +39,6 @@ Global
 		{B93E6718-1D9E-4B51-B247-5214B7703C5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B93E6718-1D9E-4B51-B247-5214B7703C5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B93E6718-1D9E-4B51-B247-5214B7703C5E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9E25799A-FFB8-4DF3-BA2C-2C61F4948483}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9E25799A-FFB8-4DF3-BA2C-2C61F4948483}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9E25799A-FFB8-4DF3-BA2C-2C61F4948483}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9E25799A-FFB8-4DF3-BA2C-2C61F4948483}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

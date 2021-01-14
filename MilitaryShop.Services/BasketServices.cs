@@ -24,10 +24,10 @@ namespace MilitaryShop.Services
         }
 
         private Basket GetBasket(HttpContextBase httpContext, bool createIfNull)
-        {
-            HttpCookie cookie = httpContext.Request.Cookies.Get(BasketSessionName);
-
+        {   
             Basket basket = new Basket();
+            HttpCookie cookie = httpContext.Request.Cookies.Get(BasketSessionName);
+            
             if (cookie != null)
             {
                 string basketId = cookie.Value;
