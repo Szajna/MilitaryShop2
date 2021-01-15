@@ -61,6 +61,14 @@
     <Compile Include="Migrations\202101141232558_AddCustomers.Designer.cs">
       <DependentUpon>202101141232558_AddCustomers.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202101151139318_Image-Basket.cs" />
+    <Compile Include="Migrations\202101151139318_Image-Basket.Designer.cs">
+      <DependentUpon>202101151139318_Image-Basket.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202101151215340_AddOrders.cs" />
+    <Compile Include="Migrations\202101151215340_AddOrders.Designer.cs">
+      <DependentUpon>202101151215340_AddOrders.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SQLRepository.cs" />
@@ -84,6 +92,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202101141232558_AddCustomers.resx">
       <DependentUpon>202101141232558_AddCustomers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101151139318_Image-Basket.resx">
+      <DependentUpon>202101151139318_Image-Basket.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101151215340_AddOrders.resx">
+      <DependentUpon>202101151215340_AddOrders.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

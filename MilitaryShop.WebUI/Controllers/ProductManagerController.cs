@@ -4,7 +4,6 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using MilitaryShop.Core.Models;
-using MilitaryShop.DataAccess.InMemory;
 using MilitaryShop.Core.ViewModels;
 using MilitaryShop.Core.Contracts;
 using System.IO;

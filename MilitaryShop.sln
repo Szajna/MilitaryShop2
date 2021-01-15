@@ -9,8 +9,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MilitaryShop.Services", "Mi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MilitaryShop.DataAccess.SQL", "MilitaryShop.DataAccess.SQL\MilitaryShop.DataAccess.SQL.csproj", "{D778FAE9-350B-4E7D-9FE8-298467EE87C6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MilitaryShop.DataAccess.InMemory", "MilitaryShop.DataAccess.InMemory\MilitaryShop.DataAccess.InMemory.csproj", "{095F5CD3-F90B-4C0F-898F-9EA3D64A6EBA}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MilitaryShop.WebUI", "MilitaryShop.WebUI\MilitaryShop.WebUI.csproj", "{B93E6718-1D9E-4B51-B247-5214B7703C5E}"
 EndProject
 Global
@@ -31,10 +29,6 @@ Global
 		{D778FAE9-350B-4E7D-9FE8-298467EE87C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D778FAE9-350B-4E7D-9FE8-298467EE87C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D778FAE9-350B-4E7D-9FE8-298467EE87C6}.Release|Any CPU.Build.0 = Release|Any CPU
-		{095F5CD3-F90B-4C0F-898F-9EA3D64A6EBA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{095F5CD3-F90B-4C0F-898F-9EA3D64A6EBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{095F5CD3-F90B-4C0F-898F-9EA3D64A6EBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{095F5CD3-F90B-4C0F-898F-9EA3D64A6EBA}.Release|Any CPU.Build.0 = Release|Any CPU
 		{B93E6718-1D9E-4B51-B247-5214B7703C5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{B93E6718-1D9E-4B51-B247-5214B7703C5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B93E6718-1D9E-4B51-B247-5214B7703C5E}.Release|Any CPU.ActiveCfg = Release|Any CPU

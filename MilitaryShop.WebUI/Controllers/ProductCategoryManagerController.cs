@@ -1,6 +1,5 @@
 ﻿using MilitaryShop.Core.Contracts;
 using MilitaryShop.Core.Models;
-using MilitaryShop.DataAccess.InMemory;
 using System;
 using System.Collections.Generic;
 using System.Linq;

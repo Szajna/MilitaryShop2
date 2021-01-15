@@ -269,6 +269,8 @@
     <Content Include="Views\Home\Details.cshtml" />
     <Content Include="Views\Basket\BasketSummary.cshtml" />
     <Content Include="Views\Basket\Index.cshtml" />
+    <Content Include="Views\Basket\Checkout.cshtml" />
+    <Content Include="Views\Basket\ThankYou.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -291,10 +293,6 @@
     <ProjectReference Include="..\MilitaryShop.Core\MilitaryShop.Core.csproj">
       <Project>{dc4d5371-467d-4ef4-892a-d631d9888c0e}</Project>
       <Name>MilitaryShop.Core</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\MilitaryShop.DataAccess.InMemory\MilitaryShop.DataAccess.InMemory.csproj">
-      <Project>{095f5cd3-f90b-4c0f-898f-9ea3d64a6eba}</Project>
-      <Name>MilitaryShop.DataAccess.InMemory</Name>
     </ProjectReference>
     <ProjectReference Include="..\MilitaryShop.DataAccess.SQL\MilitaryShop.DataAccess.SQL.csproj">
       <Project>{d778fae9-350b-4e7d-9fe8-298467ee87c6}</Project>
