@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,13 +14,18 @@ namespace MilitaryShop.Core.Models
             this.OrderItems = new List<OrderItem>();
         }
 
+        [DisplayName("First Name")]
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Email { get; set; }
         public string Street { get; set; }
         public string City { get; set; }
         public string State { get; set; }
+
+        [DisplayName("Zip Code")]
         public string ZipCode { get; set; }
+
+        [DisplayName("Order Status")]
         public string OrderStatus { get; set; }
         public virtual ICollection<OrderItem> OrderItems { get; set; }
     }

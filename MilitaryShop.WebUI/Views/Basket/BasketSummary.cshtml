@@ -1,6 +1,5 @@
 ﻿@model  MilitaryShop.Core.ViewModels.BasketSummaryViewModel
 
 <ul class="nav navbar-nav navbar-right">
-    <li><a href="@Url.Action("Index", "Basket")">@Model.BasketCount items</a></li>
-    <li><a href="@Url.Action("Index", "Basket")">@String.Format("{0:c}", Model.BasketTotal)</a></li>
+    <li class="navbar-link"><a href="@Url.Action("Index", "Basket")">Basket (@Model.BasketCount)</a></li>
 </ul>

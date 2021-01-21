@@ -1,0 +1,92 @@
+﻿@model MilitaryShop.Core.Models.Order
+
+@{
+    ViewBag.Title = "Order Details";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+
+    <div class="form-horizontal">
+        <h2>Admin / Orders / Order Details @Html.DisplayFor(model => model.Id)</h2>
+        <hr />
+        @Html.HiddenFor(model => model.Id)
+
+        <div class="col-md-6">
+            <div class="form-group">
+                @Html.LabelFor(model => model.OrderStatus, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.DisplayFor(model => model.OrderStatus, new { htmlAttributes = new { @class = "form-control" } })
+                </div>
+            </div>
+            <hr />
+            <div class="form-group">
+                @Html.LabelFor(model => model.CreateAt, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.DisplayFor(model => model.CreateAt, new { htmlAttributes = new { @class = "form-control" } })
+                </div>
+            </div>
+            <hr />
+            <div class="form-group">
+                @Html.LabelFor(model => model.FirstName, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.DisplayFor(model => model.FirstName, new { htmlAttributes = new { @class = "form-control" } })
+                </div>
+            </div>
+            <hr />
+            <div class="form-group">
+                @Html.LabelFor(model => model.LastName, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.DisplayFor(model => model.LastName, new { htmlAttributes = new { @class = "form-control" } })
+                </div>
+            </div>
+            <hr />
+            <div class="form-group">
+                @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.DisplayFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                @Html.LabelFor(model => model.Street, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.DisplayFor(model => model.Street, new { htmlAttributes = new { @class = "form-control" } })
+                </div>
+            </div>
+            <hr />
+            <div class="form-group">
+                @Html.LabelFor(model => model.City, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.DisplayFor(model => model.City, new { htmlAttributes = new { @class = "form-control" } })
+                </div>
+            </div>
+            <hr />
+            <div class="form-group">
+                @Html.LabelFor(model => model.State, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.DisplayFor(model => model.State, new { htmlAttributes = new { @class = "form-control" } })
+                </div>
+            </div>
+            <hr />
+            <div class="form-group">
+                @Html.LabelFor(model => model.ZipCode, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.DisplayFor(model => model.ZipCode, new { htmlAttributes = new { @class = "form-control" } })
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" style="clear:both">
+        @Html.Partial("OrderItems", Model.OrderItems)
+    </div>
+}
+
+
+<div>
+    @Html.ActionLink("Back to List", "Index", null, htmlAttributes: new { @class = "btn btn-primary", @role = "button" })
+</div>

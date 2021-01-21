@@ -2,6 +2,9 @@
     ViewBag.Title = "Thank You";
 }
 
-<h2>Thank You</h2>
+<h2>Done!</h2>
 Thank you for your purchase.<br /><br />
 Your order Id = @ViewBag.OrderId
+<br />
+<br />
+@Html.ActionLink("Back to Home Page", "Index", "Home", null, htmlAttributes: new { @class = "btn btn-primary", @role = "button" })

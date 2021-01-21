@@ -10,6 +10,7 @@ using System.IO;
 
 namespace MilitaryShop.WebUI.Controllers
 {
+    [Authorize(Roles = "Admin")]
     public class ProductManagerController : Controller
     {
         IRepository<Product> productRepository;
@@ -69,7 +70,7 @@ namespace MilitaryShop.WebUI.Controllers
             else
             {
                 ProductManagerViewModel viewModel = new ProductManagerViewModel();
-                viewModel.Product = new Product();
+                viewModel.Product = product;
                 viewModel.ProductCategories = productCategories.Collection();
                 return View(viewModel);
             }

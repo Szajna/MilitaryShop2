@@ -5,7 +5,7 @@
     @Html.AntiForgeryToken()
     
     <div class="form-horizontal">
-        <h4>Order</h4>
+        <h3>Order Details</h3>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         
@@ -61,12 +61,12 @@
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Proceed to payment" class="btn btn-default" />
+                <input type="submit" value="Proceed to payment" class="btn btn-success" />
             </div>
         </div>
     </div>
 }
 
 <div>
-    @Html.ActionLink("Back to Basket", "Index")
+    @Html.ActionLink("Back to Basket", "Index", null, htmlAttributes: new { @class = "btn btn-primary", @role = "button" })
 </div>

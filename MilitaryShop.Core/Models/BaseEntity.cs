@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,6 +10,8 @@ namespace MilitaryShop.Core.Models
     public abstract class BaseEntity
     {
         public string Id { get; set; }
+
+        [DisplayName("Create At")]
         public DateTimeOffset CreateAt { get; set; }
 
         public BaseEntity()

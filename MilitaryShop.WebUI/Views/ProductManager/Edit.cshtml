@@ -1,10 +1,10 @@
 ﻿@model MilitaryShop.Core.ViewModels.ProductManagerViewModel
 
 @{
-    ViewBag.Title = "Edit";
+    ViewBag.Title = "Edit Product";
 }
 
-<h2>Edit</h2>
+<h2>Admin / Products / Edit Product</h2>
 
 
 @using (Html.BeginForm("Edit", "ProductManager", FormMethod.Post, new { encType = "multipart/form-data" }))
@@ -12,7 +12,6 @@
     @Html.AntiForgeryToken()
 
     <div class="form-horizontal">
-        <h4>Product</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         @Html.HiddenFor(model => model.Product.Id)
@@ -50,7 +49,7 @@
             <div class="form-group">
                 @Html.LabelFor(model => model.Product.Category, htmlAttributes: new { @class = "control-label col-md-2" })
                 <div class="col-md-10">
-                    @Html.DropDownListFor(model => model.Product.Category, new SelectList(Model.ProductCategories, "Category", "Category"), new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.DropDownListFor(model => model.Product.Category, new SelectList(Model.ProductCategories, "Category", "Category"), new { @class = "form-control" })
 
                 </div>
             </div>
@@ -64,7 +63,7 @@
 
             <div class="form-group">
                 <div class="col-md-offset-2 col-md-10">
-                    <input type="submit" value="Save" class="btn btn-default" />
+                    <input type="submit" value="Save" class="btn btn-success" />
                 </div>
             </div>
         </div>
@@ -72,7 +71,7 @@
 }
 
 <div>
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Back to List", "Index", null, htmlAttributes: new { @class = "btn btn-primary", @role = "button" })
 </div>
 
 @section Scripts {

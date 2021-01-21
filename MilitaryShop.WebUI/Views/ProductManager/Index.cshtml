@@ -1,17 +1,19 @@
 ﻿@model IEnumerable<MilitaryShop.Core.Models.Product>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Product List";
 }
 
-<h2>Index</h2>
+<h2>Admin / Products</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Create New", "Create", null, htmlAttributes: new { @class = "btn btn-success", @role = "button" })
 </p>
 <table class="table">
     <tr>
-        <th></th>
+        <th>
+            Image
+        </th>
         <th>
             @Html.DisplayNameFor(model => model.Name)
         </th>
@@ -36,19 +38,19 @@
         <td>
             @Html.DisplayFor(modelItem => item.Name)
         </td>
-        <td>
+        <td width="35%">
             @Html.DisplayFor(modelItem => item.Description)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Price)
+            @string.Format("{0:c}", item.Price)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Category)
         </td>
        
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+            @Html.ActionLink("Edit", "Edit", new { id = item.Id }, htmlAttributes: new { @class = "btn btn-primary", @role = "button" })
+            @Html.ActionLink("Delete", "Delete", new { id = item.Id }, htmlAttributes: new { @class = "btn btn-danger", @role = "button" })
         </td>
     </tr>
 }

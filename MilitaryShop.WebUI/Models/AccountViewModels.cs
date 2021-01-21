@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
 namespace MilitaryShop.WebUI.Models
@@ -82,9 +83,11 @@ namespace MilitaryShop.WebUI.Models
 
 
         [Required]
+        [DisplayName("First Name")]
         public string FirstName { get; set; }
 
         [Required]
+        [DisplayName("Last Name")]
         public string LastName { get; set; }
 
         [Required]
@@ -97,6 +100,7 @@ namespace MilitaryShop.WebUI.Models
         public string State { get; set; }
 
         [Required]
+        [DisplayName("Zip Code")]
         public string ZipCode { get; set; }
     }
 

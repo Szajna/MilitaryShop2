@@ -115,7 +115,8 @@ namespace MilitaryShop.Services
                                   Id = b.Id,
                                   Quantity = b.Quantity,
                                   ProductName = p.Name,
-                                  Price = p.Price
+                                  Price = p.Price,
+                                  Image = p.Image
                               }).ToList();
                 return result;
             }
